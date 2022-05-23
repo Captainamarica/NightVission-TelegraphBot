@@ -12,24 +12,24 @@ psycho = Client(
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
 START_TEXT = """
-H![✨](https://telegra.ph/file/1434d9d0eb6a8bf00456a.jpg)
-I am Telegraph Media Converter🧳 Create by Telegraph v3
+H![✨](https://telegra.ph/file/757adefd2aa618727104a.jpg)
+I am Night Vission Telegraph Media Converter. Create by @NA_VA_N_JA_NA1
 I can create Pictures under 5MB
 
-~ @Master_X_Updates ~
+~ @NightVission ~
 """
 HELP_TEXT = """
 - Just give me a media under 5MB
 - Then I will download it
 - I will then upload it to the telegra.ph link
 
-Support ~ @Master_X_Updates ~
+Support ~ @NightVission ~
 """
 ABOUT_TEXT = """
-- **Bot :** `Telegraph Uploader v3`
+- **Bot :** `Night Vission Telegrap Bot`
 - **Python3 :** `3.9.6`
-- **Updates Channel: **[Master X Bot's Updates](t.me/Master_X_Updates)
-- **Support :** [Best Friends](t.me/Best_Friends15)
+- **Updates Channel: **[Night Vission Bots](t.me/NightVission)
+- **Support :** [Night Vission Chat](t.me/NightVissionSupport)
 
 """
 START_BUTTONS = InlineKeyboardMarkup(
@@ -48,8 +48,8 @@ HELP_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Support', url="t.me/Best_Friends15"),
-        InlineKeyboardButton('Updates', url='https://t.me/Master_X_Updates')
+        InlineKeyboardButton('Support', url="https://t.me/NightVissionSupport"),
+        InlineKeyboardButton('Updates', url='https://t.me/NightVission')
         ],
         [
         InlineKeyboardButton('Home', callback_data='home'),
@@ -125,13 +125,13 @@ async def getmedia(bot, update):
             reply_markup=reply_markup
         )
         return
-    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Join :-** @Master_X_Updates"
+    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Join :-** @NightVission"
     reply_markup=InlineKeyboardMarkup(
         [[
         InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
         InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
         ],[
-        InlineKeyboardButton(text="Join Updates Channel", url="https://telegram.me/Master_X_Updates")
+        InlineKeyboardButton(text="Join Updates Channel", url="https://t.me/NightVission")
         ]]
     )
     await message.edit_text(
@@ -142,5 +142,5 @@ async def getmedia(bot, update):
 
 psycho.run()
 
-# © @Master_X_Updates #
+# © @NightVission #
 
